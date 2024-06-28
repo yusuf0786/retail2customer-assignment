@@ -1,0 +1,306 @@
+/* if you want to use any variable or something from @use file than you have to make use of namespacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body.stop-body-scroll {
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  body.stop-body-scroll {
+    padding-right: 17px;
+  }
+}
+
+.text-section_wrapper {
+  width: 92%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.text-section_icon {
+  width: 48px;
+  margin: 0 auto;
+}
+.text-section_icon svg {
+  width: 100%;
+}
+
+.content-section {
+  position: relative;
+  max-height: 830px;
+  overflow: hidden;
+}
+.content-section_image {
+  width: 100%;
+}
+.content-section_image source,
+.content-section_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.content-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.content-section_content {
+  position: absolute;
+  padding-top: 30%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (max-width: 991px) {
+  .content-section_content {
+    padding-top: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .content-section_content {
+    padding-top: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .content-section_content {
+    padding-top: 65%;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.header:hover {
+  background-color: #fff;
+}
+.header:hover .navigation_top-list a {
+  color: #000;
+}
+.header:hover .navigation_btm-list a {
+  color: #000;
+}
+.header:hover .bar-container span {
+  background-color: #3f3f3f;
+}
+.header .navigation_top-list {
+  list-style-type: none;
+}
+.header .navigation_top-list a {
+  color: #fff;
+  text-decoration: none;
+}
+.header .navigation_btm-list {
+  list-style-type: none;
+}
+.header .navigation_btm-list a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+}
+.header .navigation_btm-list a.active {
+  border-bottom: 2px solid #000;
+}
+.header .navigation_dropdown-menu {
+  display: none;
+}
+.header .navigation_dropdown-menu-list {
+  list-style-type: none;
+}
+.header .navigation_dropdown-menu-list a {
+  text-decoration: none;
+}
+.header .navigation_dropdown-menu-gallery::-webkit-scrollbar {
+  width: 0px;
+}
+.header .navigation_dropdown-menu-gallery .gallery-image-cont {
+  width: 100%;
+  max-width: 230px;
+  text-align: center;
+  flex: 0 0 100%;
+}
+.header .navigation_dropdown-menu-gallery .gallery-image-cont img {
+  width: 100%;
+}
+.header .bar-container {
+  position: absolute;
+  top: 1.25rem;
+  left: 1rem;
+  width: 100%;
+  max-width: 25px;
+}
+.header .bar-container span {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 2px;
+  background-color: #f3f3f3;
+  display: block;
+}
+.header .bar-container span:last-child {
+  margin-bottom: 0;
+}
+.header .mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+.header .mobile-sidebar_navigation-body {
+  flex: 0 0 100%;
+  transition: margin-left 0.3s;
+}
+.header .mobile-sidebar_navigation-body.slide-it {
+  margin-left: -100%;
+}
+.header .mobile-sidebar_navigation-body:last-child ul {
+  display: none;
+}
+
+.footer {
+  background-color: #0f0f0f;
+}
+.footer .footer-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #828282;
+}
+.footer .footer-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.footer .footer-list li a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+  text-decoration: none;
+  color: #fff;
+}
+.footer .footer-list li a:hover {
+  text-decoration: underline;
+}
+.footer .footer-list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .accordion-item {
+  background-color: transparent;
+}
+.footer .accordion-item .accordion-button {
+  background-color: transparent;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+.hero_video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.hero_video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.hero_video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero_content {
+  padding-top: 65vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.default-btn {
+  width: fit-content;
+  border: 0.0625rem solid #FFF;
+  margin: 0 auto;
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  line-height: 1.625rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.875rem;
+  text-transform: uppercase;
+  transition: background-color ease-in-out 0.2s;
+}
+.default-btn.close-btn {
+  color: #000;
+  padding: 0.7rem 1rem 0 1rem;
+}

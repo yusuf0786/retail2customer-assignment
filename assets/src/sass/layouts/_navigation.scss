@@ -1,0 +1,124 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color .3s;
+    &:hover {
+        background-color: #fff;
+
+        .navigation {
+            &_top-list {
+                a { color: #000; }
+            }
+            &_btm-list {
+                a { color: #000; }
+            }
+        }
+
+        .bar-container {
+            span { background-color: #3f3f3f; }
+        }
+    }
+    .navigation {
+        &_top-list {
+            list-style-type: none;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        &_btm-list {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                color: #fff;
+                &.active {
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+
+        &_dropdown-menu {
+            display: none;
+        }
+        &_dropdown-menu-list {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &_dropdown-menu-gallery {
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+            .gallery-image-cont {
+                width: 100%;
+                max-width: 230px;
+                text-align: center;
+                flex: 0 0 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bar-container {
+        position: absolute;
+        top: 1.25rem;
+        left: 1rem;
+        width: 100%;
+        max-width: 25px;
+        span {
+            margin-bottom: 0.5rem;
+            width: 100%;
+            height: 2px;
+            background-color: #f3f3f3;
+            display: block;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // mobile sidebar navigation CSS
+    .mobile-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        max-width: 380px;
+        height: 100%;
+        min-height: 100vh;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+
+        &_navigation-body {
+            flex: 0 0 100%;
+            transition: margin-left 0.3s;
+            
+            &.slide-it {
+                margin-left: -100%;
+            }
+            // &:first-child {
+            //     margin-left: -100%;
+            //     transition: margin-left 0.3s;
+            // }
+            &:last-child {
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+}

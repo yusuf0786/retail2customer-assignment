@@ -1,0 +1,19 @@
+@mixin defaultBtn($bgColor: none, $textColor: #fff, $borderColor: #FFF){
+    width: fit-content;
+    border: .0625rem solid $borderColor;
+    margin: 0 auto;
+    background: $bgColor;
+    color: $textColor;
+    // font-family: futura-pt,sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    line-height: 1.625rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.875rem;
+    text-transform: uppercase;
+    transition: background-color ease-in-out .2s;
+}
